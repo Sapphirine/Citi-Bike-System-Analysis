@@ -1,0 +1,7 @@
+#!/bin/bash
+cp "2013-07 - Citi Bike trip data.csv" citibikea.csv
+echo "copy data of first month into citibikea.csv"
+rm "2013-07 - Citi Bike trip data.csv"
+echo "rm data the first month and append other data into citibike.csv"
+awk 'FNR >1' *data.csv >>citibikea.csv
+echo "the work had been done"
